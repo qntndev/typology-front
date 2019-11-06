@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="pt-32 container mx-auto">
+    <div class="pt-24 lg:pt-32 container mx-auto">
       <div class="pb-10 px-6">
         <ul class="breadcrumb py-8">
           <li>Produits</li>

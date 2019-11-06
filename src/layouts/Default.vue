@@ -51,9 +51,9 @@
       </p>
       <p class="text-center">
         avec
-        <a class="hover:underline" href="https://vuejs.org/">VueJS</a>,
-        <a class="hover:underline" href="https://gridsome.org/">Gridsome</a> et
-        <a class="hover:underline" href="https://tailwindcss.com/">Tailwindcss</a>
+        <a class="lg:hover:underline" href="https://vuejs.org/">VueJS</a>,
+        <a class="lg:hover:underline" href="https://gridsome.org/">Gridsome</a> et
+        <a class="lg:hover:underline" href="https://tailwindcss.com/">Tailwindcss</a>
       </p>
     </footer>
   </div>

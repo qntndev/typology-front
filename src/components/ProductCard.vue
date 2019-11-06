@@ -23,7 +23,7 @@
       </h2>
       <span class="inline">&mdash;&nbsp;{{regularPrice}}€</span>
       <button
-        class="preview-button p-3 w-full bg-gray-100 border-gray-300 uppercase font-semibold hover:bg-black hover:text-white hover:border-black cursor-pointer"
+        class="preview-button mt-2 p-3 w-full bg-gray-100 border-gray-300 uppercase font-semibold lg:mt-0 lg:hover:bg-black lg:hover:text-white lg:hover:border-black cursor-pointer"
       >apercu rapide</button>
     </div>
     <g-link class="absolute w-full h-full top-0 left-0" :to="path" />
@@ -53,34 +53,35 @@ export default {
 
 <style lang="scss" scoped>
 .product-card {
-  &:hover {
+  @media (min-width: 1280px) {
+    &:hover {
+      .preview-button {
+        opacity: 1;
+      }
+
+      .animate-image {
+        opacity: 0;
+        filter: blur(0.8rem);
+        transition-duration: 0s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition-delay: 0.2s;
+      }
+
+      .animate-preview-image {
+        transform: none;
+        transition-duration: 0.2s;
+        transition-delay: 0.05s;
+        opacity: 1;
+      }
+    }
     .preview-button {
-      opacity: 1;
-    }
-
-    .animate-image {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      z-index: 2;
       opacity: 0;
-      filter: blur(0.8rem);
-      transition-duration: 0s;
-      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      transition-delay: 0.2s;
-    }
-
-    .animate-preview-image {
-      transform: none;
-      transition-duration: 0.2s;
-      transition-delay: 0.05s;
-      opacity: 1;
     }
   }
-}
-
-.preview-button {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
 }
 
 .animate-image {
