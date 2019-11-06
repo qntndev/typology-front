@@ -1,15 +1,8 @@
 @import 'fonts';
 
 @tailwind base;
-
-html {
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-body {
-    background-color: #fbf9f7;
-}
-
 @tailwind components;
+
+@import './components/breadcrumb.scss';
+
 @tailwind utilities;

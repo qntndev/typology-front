@@ -1,33 +1,63 @@
 <template>
   <Layout>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+    <div class="pt-32 container mx-auto">
+      <div class="pb-10 px-6">
+        <ul class="breadcrumb py-8">
+          <li>Produits</li>
+          <li>Nouveautés</li>
+        </ul>
+        <h1 class="text-7xl font-semibold uppercase">Nouveautés</h1>
+        <p class="font-mono">
+          4/5 |
+          <span class="font-semibold">26 avis vérifiés sur les produits Nouveautés</span>
+        </p>
+      </div>
+      <hr class="my-6 border-gray-300" />
+      <div class="row mx-3">
+        <ProductCard
+          v-for="product in $page.products.edges"
+          :key="product.node.id"
+          class="col-3"
+          :path="product.node.path"
+          :title="product.node.title"
+          :subtitle="product.node.subtitle"
+          :reference="product.node.reference"
+          :image="product.node.image"
+          :regular-price="product.node.regularPrice"
+          :tag="product.node.tag"
+        />
+      </div>
+    </div>
   </Layout>
 </template>
 
 <script>
+import ProductCard from "~/components/ProductCard.vue";
+
 export default {
-  metaInfo: {
-    title: 'Hello, world!'
+  components: {
+    ProductCard
   }
-}
+};
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
+
+<page-query>
+query Product {
+  products: allProduct {
+    edges {
+      node { 
+        path
+        id
+        title
+        subtitle
+        reference
+        volume
+        regularPrice
+        image
+        tag
+      }
+    }
+  }
 }
-</style>
+</page-query>

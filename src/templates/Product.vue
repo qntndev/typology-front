@@ -8,12 +8,16 @@
         <div class="max-w-sm m-auto">
           <div class="border border-solid border-gray-500 pt-8 px-10">
             <p class="mb-4 text-xs" v-html="$page.product.subtitle" />
-            <h1 class="mb-8 text-2xl leading-tight font-semibold" v-html="$page.product.title" />
+            <h1 class="mb-8 text-2xl leading-tight font-semibold">
+              {{$page.product.title}}
+              <br />
+              {{$page.product.subtitle}}
+            </h1>
             <div class="mb-8 font-mono" v-html="$page.product.description" />
           </div>
           <button
             class="mt-3 uppercase bg-black text-white p-6 w-full"
-          >ajouter au panier - {{$page.product.regular_price}}</button>
+          >ajouter au panier - {{$page.product.regularPrice}}</button>
         </div>
       </div>
     </div>
@@ -26,9 +30,12 @@ query ($id: ID!) {
   product(id: $id) {
     title
     subtitle
+    reference
+    volume
     description
-    regular_price
+    regularPrice
     image
+    tag
   }
 }
 </page-query>

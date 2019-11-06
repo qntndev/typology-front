@@ -1,0 +1,12 @@
+.breadcrumb {
+	li {
+		@apply inline-block;
+		@apply text-xs;
+		+ li {
+			&::before {
+				content: '/';
+				@apply px-1;
+			}
+		}
+	}
+}

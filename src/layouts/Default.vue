@@ -14,13 +14,13 @@
         <nav class>
           <ul class="flex flex-row justify-center">
             <li>
-              <g-link class="p-2 uppercase text-md font-semibold" to="/produits">produits</g-link>
+              <g-link class="py-2 px-3 uppercase text-md font-semibold" to>produits</g-link>
             </li>
             <li>
-              <g-link class="p-2 uppercase text-md font-semibold" to>routines</g-link>
+              <g-link class="py-2 px-3 uppercase text-md font-semibold" to>routines</g-link>
             </li>
             <li>
-              <g-link class="p-2 uppercase text-md font-semibold" to>à propos</g-link>
+              <g-link class="py-2 px-3 uppercase text-md font-semibold" to>à propos</g-link>
             </li>
           </ul>
         </nav>
