@@ -44,6 +44,18 @@
       </div>
     </header>
     <slot />
+    <footer class="py-16">
+      <p class="text-center font-mono">
+        Codé avec passion par
+        <strong class="font-semibold">Quentin</strong> 👋
+      </p>
+      <p class="mt-2 text-center">
+        avec
+        <a class="hover:underline" href="https://vuejs.org/">VueJS</a>,
+        <a class="hover:underline" href="https://gridsome.org/">Gridsome</a> et
+        <a class="hover:underline" href="https://tailwindcss.com/">Tailwindcss</a>
+      </p>
+    </footer>
   </div>
 </template>
 
