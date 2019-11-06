@@ -47,13 +47,25 @@
 }
 
 @font-face {
-	font-family: 'LL Lettera Text Pro';
-	src: url('../fonts/subset-LL-Lettera-Text-Pro.eot');
-	src: url('../fonts/subset-LL-Lettera-Text-Pro.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/subset-LL-Lettera-Text-Pro.woff2') format('woff2'),
-		url('../fonts/subset-LL-Lettera-Text-Pro.woff') format('woff'),
-		url('../fonts/subset-LL-Lettera-Text-Pro.ttf') format('truetype'),
-		url('../fonts/subset-LL-Lettera-Text-Pro.svg#.') format('svg');
+	font-family: 'Lettera Text';
+	src: url('../fonts/subset-Lineto-Lettera-Text-Regular.eot');
+	src: url('../fonts/subset-Lineto-Lettera-Text-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-Lineto-Lettera-Text-Regular.woff2') format('woff2'),
+		url('../fonts/subset-Lineto-Lettera-Text-Regular.woff') format('woff'),
+		url('../fonts/subset-Lineto-Lettera-Text-Regular.ttf') format('truetype'),
+		url('../fonts/subset-Lineto-Lettera-Text-Regular.svg#.') format('svg');
 	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lettera Text';
+	src: url('../fonts/subset-Lineto-Lettera-Text-Bold.eot');
+	src: url('../fonts/subset-Lineto-Lettera-Text-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-Lineto-Lettera-Text-Bold.woff2') format('woff2'),
+		url('../fonts/subset-Lineto-Lettera-Text-Bold.woff') format('woff'),
+		url('../fonts/subset-Lineto-Lettera-Text-Bold.ttf') format('truetype'),
+		url('../fonts/subset-Lineto-Lettera-Text-Bold.svg#.') format('svg');
+	font-weight: 600;
 	font-style: normal;
 }
