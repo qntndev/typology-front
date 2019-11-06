@@ -35,6 +35,7 @@ query ($id: ID!) {
     description
     regularPrice
     image
+    hoverImage
     tag
   }
 }

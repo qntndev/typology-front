@@ -21,6 +21,7 @@ module.exports = function(api) {
 				description: item.description,
 				regularPrice: item.regular_price,
 				image: item.image,
+				hoverImage: item.hover_image,
 				tag: item.tag
 			});
 		}

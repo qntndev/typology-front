@@ -8,13 +8,15 @@ module.exports = () => {
 			html: {
 				// fontFamily: theme('fontFamily.mono').join(),
 				fontSize: '16px',
-				lineHeight: 1.7
+				lineHeight: 1.7,
+				'-webkit-font-smoothing': 'antialiased'
 			},
 			body: {
 				backgroundColor: '#fbf9f7'
 			},
 			button: {
-				margin: 0
+				margin: 0,
+				borderColor: 'transparent'
 			},
 			img: {
 				maxWidth: '100%',

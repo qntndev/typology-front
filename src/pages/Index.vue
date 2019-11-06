@@ -14,18 +14,19 @@
       </div>
       <hr class="my-6 border-gray-300" />
       <div class="row mx-3">
-        <ProductCard
-          v-for="product in $page.products.edges"
-          :key="product.node.id"
-          class="col-3"
-          :path="product.node.path"
-          :title="product.node.title"
-          :subtitle="product.node.subtitle"
-          :reference="product.node.reference"
-          :image="product.node.image"
-          :regular-price="product.node.regularPrice"
-          :tag="product.node.tag"
-        />
+        <div class="col-3" v-for="product in $page.products.edges" :key="product.node.id">
+          <ProductCard
+            class="pb-8"
+            :path="product.node.path"
+            :title="product.node.title"
+            :subtitle="product.node.subtitle"
+            :reference="product.node.reference"
+            :image="product.node.image"
+            :hover-image="product.node.hoverImage"
+            :regular-price="product.node.regularPrice"
+            :tag="product.node.tag"
+          />
+        </div>
       </div>
     </div>
   </Layout>
@@ -55,6 +56,7 @@ query Product {
         volume
         regularPrice
         image
+        hoverImage
         tag
       }
     }

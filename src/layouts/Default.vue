@@ -1,6 +1,6 @@
 <template>
   <div class="font-body text-sm layout">
-    <header class="absolute top-0 left-0 w-full flex flex-row items-center px-10 pt-3 z-10">
+    <header class="absolute top-0 left-0 w-full flex flex-row items-center px-12 pt-4 z-10">
       <div class="w-1/3">
         <g-link to="/">
           <img
@@ -14,7 +14,7 @@
         <nav class>
           <ul class="flex flex-row justify-center">
             <li>
-              <g-link class="py-2 px-3 uppercase text-md font-semibold" to>produits</g-link>
+              <g-link class="py-2 px-3 uppercase text-md font-semibold" to="/">produits</g-link>
             </li>
             <li>
               <g-link class="py-2 px-3 uppercase text-md font-semibold" to>routines</g-link>
@@ -27,12 +27,17 @@
       </div>
       <div class="w-1/3">
         <nav class>
-          <ul class="flex flex-row justify-end">
+          <ul class="flex flex-row justify-end items-center">
             <li>
-              <g-link class="uppercase p-2" to>se connecter</g-link>
+              <g-link class="uppercase py-2 px-3 text-md font-semibold" to>se connecter</g-link>
             </li>
             <li>
-              <g-link class="uppercase p-2" to>panier</g-link>
+              <g-link class="flex items-center" to>
+                <span class="uppercase py-2 pl-3 pr-1 text-md font-semibold">panier</span>
+                <span
+                  class="w-6 h-6 flex justify-center items-center bg-black rounded-full text-xs text-white"
+                >0</span>
+              </g-link>
             </li>
           </ul>
         </nav>
