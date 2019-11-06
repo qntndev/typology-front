@@ -16,9 +16,12 @@ module.exports = function(api) {
 				id: item.id,
 				title: item.title,
 				subtitle: item.subtitle,
+				reference: item.reference,
+				volume: item.volume,
 				description: item.description,
-				regular_price: item.regular_price,
-				image: item.image
+				regularPrice: item.regular_price,
+				image: item.image,
+				tag: item.tag
 			});
 		}
 	});

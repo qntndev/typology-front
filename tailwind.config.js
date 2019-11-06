@@ -28,6 +28,7 @@ module.exports = {
 				'5/4': '125%'
 			},
 			fontSize: {
+				xxs: '0.625rem',
 				'7xl': '5.5rem'
 			}
 		}
