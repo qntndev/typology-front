@@ -9,8 +9,8 @@ const purgecss = require('@fullhuman/postcss-purgecss');
 
 module.exports = {
 	siteName: 'Typology',
-	siteUrl: 'https://<your-github-username>.github.io',
-	pathPrefix: '/<your-gridsome-repo-name>',
+	siteUrl: 'https://qntndev.github.io',
+	pathPrefix: '/typology-front',
 	plugins: [],
 	templates: {
 		Product: '/produits/:title'
