@@ -1,8 +1,18 @@
 <template>
   <div class="product-card relative">
     <div class="relative pb-5/4 overflow-hidden bg-gray-200">
-      <img class="image absolute h-full w-full object-cover" :src="image" alt />
-      <img class="preview-image absolute h-full w-full object-cover" :src="hoverImage" alt />
+      <img
+        :class="{'animate-image': hoverImage}"
+        class="absolute h-full w-full object-cover"
+        :src="image"
+        alt
+      />
+      <img
+        v-if="hoverImage"
+        class="animate-preview-image absolute h-full w-full object-cover"
+        :src="hoverImage"
+        alt
+      />
     </div>
     <h3 class="absolute top-0 right-0 mr-4 mt-4 uppercase text-xxs tracking-widest" v-html="tag" />
     <div class="relative pt-4">
@@ -11,7 +21,7 @@
         <br v-if="subtitle" />
         {{subtitle}}
       </h2>
-      <span class="inline">&mdash;{{regularPrice}}€</span>
+      <span class="inline">&mdash;&nbsp;{{regularPrice}}€</span>
       <button
         class="preview-button p-3 w-full bg-gray-100 border-gray-300 uppercase font-semibold hover:bg-black hover:text-white hover:border-black cursor-pointer"
       >apercu rapide</button>
@@ -48,17 +58,18 @@ export default {
       opacity: 1;
     }
 
-    .image {
+    .animate-image {
       opacity: 0;
-      filter: blur(0.75rem);
-      transition-duration: 0.8s;
+      filter: blur(0.8rem);
+      transition-duration: 0s;
       transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      transition-delay: 0s;
+      transition-delay: 0.2s;
     }
 
-    .preview-image {
+    .animate-preview-image {
       transform: none;
-      transition-delay: 0.1s;
+      transition-duration: 0.2s;
+      transition-delay: 0.05s;
       opacity: 1;
     }
   }
@@ -72,14 +83,15 @@ export default {
   opacity: 0;
 }
 
-.image {
+.animate-image {
   transition-duration: 1.5s;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  transition-delay: 0.15s;
+  // transition-delay: 0.15s;
 }
 
-.preview-image {
-  transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+.animate-preview-image {
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   transform: scale3d(1.05, 1.05, 1.05);
   opacity: 0;
 }

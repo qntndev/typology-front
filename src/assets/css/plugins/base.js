@@ -5,14 +5,10 @@ module.exports = () => {
 				boxSizing: 'border-box',
 				outline: 'none'
 			},
-			html: {
-				// fontFamily: theme('fontFamily.mono').join(),
+			'html, body': {
 				fontSize: '16px',
-				lineHeight: 1.7,
+				backgroundColor: '#fbf9f7',
 				'-webkit-font-smoothing': 'antialiased'
-			},
-			body: {
-				backgroundColor: '#fbf9f7'
 			},
 			button: {
 				margin: 0,
@@ -30,6 +26,9 @@ module.exports = () => {
 				border: 0,
 				borderBottomWidth: '1px',
 				borderBottomStyle: 'solid'
+			},
+			p: {
+				lineHeight: 1.7
 			}
 		});
 	};

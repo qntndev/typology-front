@@ -1,6 +1,6 @@
 <template>
   <div class="font-body text-sm layout">
-    <header class="absolute top-0 left-0 w-full flex flex-row items-center px-12 pt-4 z-10">
+    <header class="absolute top-0 left-0 w-full flex justify-between items-center px-12 pt-4 z-10">
       <div class="w-1/3">
         <g-link to="/">
           <img
@@ -10,7 +10,7 @@
           />
         </g-link>
       </div>
-      <div class="w-1/3">
+      <div class="lg:w-1/3 hidden md:block">
         <nav class>
           <ul class="flex flex-row justify-center">
             <li>
@@ -25,10 +25,10 @@
           </ul>
         </nav>
       </div>
-      <div class="w-1/3">
+      <div class="lg:w-1/3">
         <nav class>
           <ul class="flex flex-row justify-end items-center">
-            <li>
+            <li class="hidden lg:block">
               <g-link class="uppercase py-2 px-3 text-md font-semibold" to>se connecter</g-link>
             </li>
             <li>
@@ -49,7 +49,7 @@
         Codé avec passion par
         <strong class="font-semibold">Quentin</strong> 👋
       </p>
-      <p class="mt-2 text-center">
+      <p class="text-center">
         avec
         <a class="hover:underline" href="https://vuejs.org/">VueJS</a>,
         <a class="hover:underline" href="https://gridsome.org/">Gridsome</a> et

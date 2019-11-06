@@ -6,7 +6,7 @@
           <li>Produits</li>
           <li>Nouveautés</li>
         </ul>
-        <h1 class="text-7xl font-semibold uppercase">Nouveautés</h1>
+        <h1 class="text-4xl md:text-7xl font-semibold uppercase">Nouveautés</h1>
         <p class="font-mono">
           4/5 |
           <span class="font-semibold">26 avis vérifiés sur les produits Nouveautés</span>
@@ -14,7 +14,7 @@
       </div>
       <hr class="my-6 border-gray-300" />
       <div class="row mx-3">
-        <div class="col-3" v-for="product in $page.products.edges" :key="product.node.id">
+        <div class="col-6 md:col-3" v-for="product in $page.products.edges" :key="product.node.id">
           <ProductCard
             class="pb-8"
             :path="product.node.path"

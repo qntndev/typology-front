@@ -19,6 +19,7 @@ module.exports = {
 				}
 			},
 			spacing: {
+				'28': '7rem',
 				'1/2': '50%',
 				'1/3': '33.333333%',
 				'2/3': '66.666667%',
@@ -43,6 +44,7 @@ module.exports = {
 		require('./src/assets/css/plugins/grid')({
 			columns: 12,
 			gutterWidth: '0.75rem'
-		})
+		}),
+		require('./src/assets/css/plugins/transitions')()
 	]
 };
