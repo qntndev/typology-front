@@ -8,7 +8,7 @@
             <img :src="$page.product.image" alt />
           </div>
         </div>
-        <div class="md:col-6 lg:col-5 pt-24 lg:pt-28">
+        <div class="md:col-6 lg:col-5 pt-12 md:pt-24 lg:pt-28">
           <div class="max-w-sm m-auto">
             <div class="border border-solid border-gray-500 pb-6">
               <div class="px-10 pt-8">

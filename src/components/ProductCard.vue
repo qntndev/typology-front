@@ -15,6 +15,7 @@
       />
     </div>
     <h3 class="absolute top-0 right-0 mr-4 mt-4 uppercase text-xxs tracking-widest" v-html="tag" />
+    <g-link class="absolute w-full h-full top-0 left-0" :to="path" />
     <div class="relative pt-4">
       <h2 class="inline leading-tight">
         <span class="font-semibold">{{title}}</span>
@@ -23,10 +24,9 @@
       </h2>
       <span class="inline">&mdash;&nbsp;{{regularPrice}}€</span>
       <button
-        class="preview-button mt-2 p-3 w-full bg-gray-100 border-gray-300 uppercase font-semibold lg:mt-0 lg:hover:bg-black lg:hover:text-white lg:hover:border-black cursor-pointer"
+        class="preview-button mt-2 p-3 w-full z-10 bg-gray-100 border-gray-300 uppercase font-semibold xl:mt-0 hover:bg-black hover:text-white hover:border-black cursor-pointer"
       >apercu rapide</button>
     </div>
-    <g-link class="absolute w-full h-full top-0 left-0" :to="path" />
   </div>
 </template>
 
@@ -78,7 +78,6 @@ export default {
       position: absolute;
       top: 15px;
       left: 0;
-      z-index: 2;
       opacity: 0;
     }
   }

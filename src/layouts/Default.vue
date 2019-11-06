@@ -1,6 +1,8 @@
 <template>
   <div class="font-body text-sm layout">
-    <header class="absolute top-0 left-0 w-full flex justify-between items-center px-12 pt-4 z-10">
+    <header
+      class="absolute top-0 left-0 w-full flex justify-between items-center px-6 pt-2 lg:px-12 lg:pt-4 z-10"
+    >
       <div class="w-1/3">
         <g-link to="/">
           <img
