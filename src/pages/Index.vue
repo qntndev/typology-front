@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <div class="pt-12 lg:pt-32 container mx-auto">
-      <div class="pb-4 lg:pb-10 px-4 lg:px-6">
+    <div class="pt-12 sm:pt-16 lg:pt-32 container mx-auto">
+      <div class="md:pb-4 lg:pb-10 px-2 sm:px-6">
         <ul class="breadcrumb pt-8 pb-2 lg:py-8">
           <li>Produits</li>
           <li>Nouveautés</li>
@@ -12,8 +12,8 @@
           <span class="font-semibold">26 avis vérifiés sur les produits Nouveautés</span>
         </p>
       </div>
-      <hr class="my-6 border-gray-300" />
-      <div class="row mx-1 lg:mx-3">
+      <hr class="my-4 sm:my-6 border-gray-300" />
+      <div class="row mx-0 sm:mx-3">
         <div class="col-6 lg:col-3" v-for="product in $page.products.edges" :key="product.node.id">
           <ProductCard
             class="pb-8"

@@ -14,17 +14,19 @@
         alt
       />
     </div>
-    <h3 class="absolute top-0 right-0 mr-4 mt-4 uppercase text-xxs tracking-widest" v-html="tag" />
+    <h3 class="absolute top-0 right-0 mr-2 mt-2 md:mr-3 md:mt-3 lg:mr-4 lg:mt-4 uppercase text-3xs sm:text-2xs tracking-widest" v-html="tag" />
     <g-link class="absolute w-full h-full top-0 left-0" :to="path" />
-    <div class="relative pt-4">
+    <div class="relative flex flex-col flex-grow pt-2 xl:pt-4">
+      <div class="pb-2 xl:pb-0 text-xs sm:text-sm">
       <h2 class="inline leading-tight">
         <span class="font-semibold">{{title}}</span>
         <br v-if="subtitle" />
         {{subtitle}}
       </h2>
       <span class="inline">&mdash;&nbsp;{{regularPrice}}€</span>
+      </div>
       <button
-        class="preview-button mt-2 p-3 w-full z-10 bg-gray-100 border-gray-300 uppercase font-semibold xl:mt-0 hover:bg-black hover:text-white hover:border-black cursor-pointer"
+        class="preview-button mt-auto p-3 w-full z-10 bg-gray-100 border-gray-300 uppercase font-semibold text-2xs sm:text-xs xl:mt-0 hover:bg-black hover:text-white hover:border-black cursor-pointer"
       >apercu rapide</button>
     </div>
   </div>
@@ -53,6 +55,9 @@ export default {
 
 <style lang="scss" scoped>
 .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   @media (min-width: 1280px) {
     &:hover {
       .preview-button {

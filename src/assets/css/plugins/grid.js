@@ -7,7 +7,7 @@ module.exports = function({ columns = 12, gutterWidth = '1rem', variants = [ 're
 		addComponents([
 			{
 				'.container, .container-fluid': {
-					...mixins.paddingX(gutterWidth)
+					...mixins.paddingX('0.5rem')
 				},
 				'.container-fluid': {
 					width: '100%'
@@ -15,11 +15,22 @@ module.exports = function({ columns = 12, gutterWidth = '1rem', variants = [ 're
 				'.row': {
 					display: 'flex',
 					flexWrap: 'wrap',
-					...mixins.marginX('-' + gutterWidth)
+					...mixins.marginX('-0.5rem')
 				},
 				'.col,[class*= "col-"]': {
 					width: '100%',
-					...mixins.paddingX(gutterWidth)
+					...mixins.paddingX('0.5rem')
+				},
+				'@media (min-width: 640px)': {
+					'.container, .container-fluid': {
+						...mixins.paddingX(gutterWidth)
+					},
+					'.row': {
+						...mixins.marginX('-' + gutterWidth)
+					},
+					'.col,[class*= "col-"]': {
+						...mixins.paddingX(gutterWidth)
+					}
 				}
 			}
 		]),
